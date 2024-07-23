@@ -1,0 +1,12 @@
+a = int(input("Enter the marks of Physics: "))
+b = int(input("Enter the marks of Chemistry: "))
+c = int(input("Enter the marks of Biology: "))
+d = int(input("Enter the marks of Maths: "))
+e = int(input("Enter the marks of Computer: "))
+f = (a + b + c + d + e) / 5
+print ("\nThe percentage obtained is: ", f)
+if  f >= 90 : print ("\nGrade A")
+elif   f >= 80 and f < 90 : print("\nGrade: B")
+elif   f >= 70 and f < 80 : print("\nGrade C")
+elif   f >= 60 and f <  70 : print("\nGrade D")
+else : print("\nGrade F")

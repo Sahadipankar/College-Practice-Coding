@@ -1,0 +1,58 @@
+#box {
+    background-color: rgb(110, 116, 212);
+}
+.heading { 
+    width: 500px;
+    height: 50px;
+    color: rgb(133, 11, 11);
+    background-color: aqua;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(104, 131, 78);
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+}
+th {
+    color: rgb(23, 7, 86);
+    background-color: rgb(168, 195, 19);
+}
+button {
+    background-color: rgb(222, 253, 85);
+}
+h1 {
+    text-decoration: rgb(13, 5, 1) dotted overline;
+}
+#abc {
+    text-decoration: none;
+}
+#story {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 40px;
+    text-transform: capitalize;
+}
+.traffic {
+    height: 335px;
+    width: 100px;
+    background-color: black;
+    padding: 30px;
+}
+#red {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 50%;
+}
+#yellow {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+#green {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
