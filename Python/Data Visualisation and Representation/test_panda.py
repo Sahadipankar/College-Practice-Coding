@@ -51,4 +51,4 @@ print(data.values)  # values attribute returns a NumPy representation of the Dat
 
 # 12. Print only the "Name" column
 print("\n12. Only Name column:\n")
-print(data["Name"])  # selecting a single column by label
+print(data["Name"])  # selecting a single column by label.
