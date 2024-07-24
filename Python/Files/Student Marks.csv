@@ -1,0 +1,11 @@
+Student ID,Name,Maths,Science,English,History,Geography,Total Marks,Total Percentage,Pass/Fail
+1,John,85,90,80,85,90,430,86,Pass
+2,Emma,70,80,75,70,80,375,75,Pass
+3,Michael,28,30,36,15,20,129,25.8,Fail
+4,Sarah,55,65,50,55,65,290,58,Pass
+5,David,80,85,80,80,85,410,82,Pass
+6,Olivia,85,90,80,85,90,430,86,Pass
+7,William,65,70,60,65,70,330,66,Pass
+8,Ava,50,60,45,50,60,265,53,Pass
+9,Ethan,10,25,36,42,20,133,26.6,Fail
+10,Isabella,75,85,75,75,85,395,79,Pass
