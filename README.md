@@ -28,7 +28,7 @@ Diving deeper into Data Science, enhancing my skills in machine learning, and ex
 Did you know? My first program was a "Hello World!" script. Now, I dream of creating AI that says "Hello Universe!" 🌌
 
 ### 📫 Let's Connect
-[LinkedIn](https://www.linkedin.com/in/dipankar-saha-ds04061997/) | [Email](mailto:sahadepankar@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/dipaankar-saha-ds04061997/) | [Email](mailto:sahadepankar@gmail.com)
 
 ### 💬 Ask Me About
 - C
