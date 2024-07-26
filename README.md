@@ -1,4 +1,4 @@
-# Welcome to Dipankar's GitHub Profile! 👋
+# Welcome to my GitHub Profile! 👋
 
 ## About Me
 Hey there! I'm Dipankar Saha, a passionate and aspiring Data Scientist based in Kolkata. With a keen interest in exploring new technologies and solving challenging problems, I thrive on contributing to open-source projects and making a difference through code. Currently, I'm pursuing my BCA, and every day is a new opportunity to learn and grow. 
