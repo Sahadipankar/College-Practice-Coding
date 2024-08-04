@@ -10,5 +10,6 @@ public class AreaOfCircle {
         double area = Math.PI * radius * radius;
         // double area = (22 / 7) * radius * radius;
         System.out.println("Area of circle is: " + area);
+        sc.close(); // Closing Scanner
     }
 }

@@ -11,5 +11,6 @@ public class Find_remainder {
         double num2 = sc.nextDouble();
         System.out.print("The Remainder of First and Second Number is: ");
         System.out.println(num1 % num2);
+        sc.close();
     }
 }

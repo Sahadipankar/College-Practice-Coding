@@ -11,5 +11,6 @@ public class Sum_of_two_numbers {
         double num2 = sc.nextDouble();
         double sum = num1 + num2;
         System.out.println("\nSum of two numbers is: " + sum);
+        sc.close();
     }
 }
