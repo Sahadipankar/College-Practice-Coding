@@ -1,69 +1,94 @@
-# Welcome to my GitHub Profile! 👋
+![logo](https://github.com/Sahadipankar/Sahadipankar/blob/main/My%20Github%20Banner.png)
+<h1 align="center">Welcome to my GitHub Profile!<br>Hi 👋, I'm Dipankar Saha</h1>
+<h3 align="center">A passionate and aspiring Software Engineer based in Kolkata.<br>Every day is a new opportunity to learn and grow</h3>
 
-## About Me
-Hey there! I'm Dipankar Saha, a passionate and aspiring Data Scientist based in Kolkata. With a keen interest in exploring new technologies and solving challenging problems, I thrive on contributing to open-source projects and making a difference through code. Currently, I'm pursuing my BCA, and every day is a new opportunity to learn and grow. 
+<img align="right" alt="coding" width="400" src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif">
 
-### 🎓 Education
-Currently pursuing BCA at Brainware University. 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=sahadipankar&label=Profile%20views&color=0e75b6&style=flat" alt="sahadipankar" /> </p>
 
-### 💼 Professional Highlights
-- **[Your Job Title]** at **[Your Company]**: Briefly describe your role and achievements... To be filled later
-- **Internship** at **[Company Name]**: What did you learn and accomplish?... To be filled later
+- 🔭 I’m currently pursuing my **BCA - Hons**
 
-### 🔧 Technologies & Tools
-**Programming Languages**: C, Python, HTML, CSS, DBMS, Java, JavaScript, OS, Arduino
+- 👨‍💻 All of my projects are available at [GitHub](https://github.com/Sahadipankar/College-Practice-Coding)
+  
+- <h3 align="left">Languages and Tools:</h3>
+<p align="left">
+  <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
+    <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/>
+  </a>
+  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/>
+  </a>
+  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+  </a>
+  <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+  </a>
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
+  </a>
+  <a href="https://www.java.com" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
+  </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+  </a>
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/>
+  </a>
+  <a href="https://www.python.org" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
+  </a>
+  <a href="https://sass-lang.com" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
+  </a>
+  <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/>
+  </a>
+  <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer">
+    <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/>
+  </a>
+</p>
 
-**Frontend Development**: [Your Frontend Frameworks/Libraries]... To be filled later
+- 💬 Ask me about:
+  - **C**
+  - **Python**
+  - **DSA**
+  - **Java**
+  - **JavaScript**
+  - **DBMS**
+  - **HTML**
+  - **CSS**
+  - **Arduino**
+    
+- 🌱 I’m currently learning **Java and DBMS**
+  
+<h3 align="left">GitHub Stats:</h3>
+<p align="left">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" />
+</p>
 
-**Backend Development**: [Your Backend Frameworks/Libraries]... To be filled later
+- 📫 How to reach me **[Email](mailto:sahadepankar@gmail.com)**
 
-**Databases**: [Your Databases]... To be filled later
+- 💡 Fun fact<br>
+  **Did you know? My first program was a "Hello World!" script. Now, I dream of creating AI that says "Hello Universe!" 🌌**
 
-**Tools & Utilities**: [Your Tools]... To be filled later
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+  <a href="https://linkedin.com/in/dipankar-saha-ds" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dipankar-saha-ds04061997" height="30" width="40" />
+  </a>
+  <a href="https://fb.com/sahaadipankar" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="sahadepankar" height="30" width="40" />
+  </a>
+  <a href="https://instagram.com/akash_.raj" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="akash_.raj" height="30" width="40" />
+  </a>
+</p>
 
-### 🌱 Currently Learning
-Diving deeper into Data Science, enhancing my skills in machine learning, and exploring the latest in AI. Next up: world domination (just kidding... maybe). 🤖
-
-### 💡 Fun Fact
-Did you know? My first program was a "Hello World!" script. Now, I dream of creating AI that says "Hello Universe!" 🌌
-
-### 📫 Let's Connect
-[LinkedIn](https://www.linkedin.com/in/dipaankar-saha-ds04061997/) | [Email](mailto:sahadepankar@gmail.com)
-
-### 💬 Ask Me About
-- C
-- Python
-- Java
-- JavaScript
-- HTML
-- CSS
-- Arduino
-- Data Structure and Algorithm
-- Data Science and Machine Learning
-- Interesting coding projects and problem-solving techniques
-
-### 🚀 My GitHub Stats
-Check out my contributions and projects to see the journey so far. Your feedback and collaboration are always welcome!
-
-### 🎉 Thanks for Visiting!
-Feel free to explore my repositories, and don’t hesitate to reach out if you have any questions or just want to chat. Happy coding! 😊
-
----
-
-### 📝 Placeholder for More Information
-- **Achievements**: [List your major achievements]... To be filled later
-- **Certifications**: [List your certifications]... To be filled later
-- **Projects**: [Highlight your major projects]... To be filled later
-
----
-
-## ⭐ Recommendations for Job Interviews
-1. **Key Strengths**: [Describe your key strengths]... To be filled later
-2. **Project Highlights**: [Describe your standout projects]... To be filled later
-3. **Technological Proficiency**: [Highlight your expertise in key technologies]... To be filled later
-
----
-
-### ⚡ Quick Tip
-Don't just code, create! 🚀 And remember, debugging is like being a detective in a crime movie where you are also the murderer. 🔍
-
+<p align="left">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" />
+</p>
+<p align="left">
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" />
+</p>
