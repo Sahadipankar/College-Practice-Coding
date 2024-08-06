@@ -4,15 +4,17 @@
 
 <img align="right" alt="coding" width="400" src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif">
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=sahadipankar&label=Profile%20views&color=0e75b6&style=flat" alt="sahadipankar" /> </p>
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=sahadipankar&label=Profile%20views&color=0e75b6&style=flat" alt="sahadipankar" />
+</p>
 
 - 🔭 I’m currently pursuing my **BCA - Hons**
 
 - 👨‍💻 All of my projects are available at [GitHub](https://github.com/Sahadipankar/College-Practice-Coding)
 
 <hr>
-  
-- <h3 align="left">Languages and Tools:</h3>
+
+<h3 align="left">Languages and Tools:</h3>
 <p align="left">
   <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
     <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/>
@@ -54,42 +56,50 @@
 
 <hr>
 
-- 💬 Ask me about:
-  - **C**
-  - **Python**
-  - **DSA**
-  - **Java**
-  - **JavaScript**
-  - **DBMS**
-  - **HTML**
-  - **CSS**
-  - **Arduino**
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td width="50%" valign="top" style="border: none;">
+      <h3>Ask me about:</h3>
+      <ul>
+        <li><strong>C</strong></li>
+        <li><strong>Python</strong></li>
+        <li><strong>DSA</strong></li>
+        <li><strong>Java</strong></li>
+        <li><strong>JavaScript</strong></li>
+        <li><strong>DBMS</strong></li>
+        <li><strong>HTML</strong></li>
+        <li><strong>CSS</strong></li>
+        <li><strong>Arduino</strong></li>
+      </ul>
+    </td>
+    <td width="1000" valign="top" style="border: none;">
+      <h3>GitHub Stats:</h3>
+      <img align="top" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" width="100%" style="border: none;" />
+    </td>
+  </tr>
+</table>
 
 <hr>
-  
+
 - 🌱 I’m currently learning **Java and DBMS**
-  
-<h3 align="left">GitHub Stats:</h3>
-<p align="left">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" />
-</p>
 
-<hr>
-  
 - 📫 How to reach me **[Email](mailto:sahadepankar@gmail.com)**
 
 - 💡 Fun fact<br>
-
   **Did you know? My first program was a "Hello World!" script. Now, I dream of creating AI that says "Hello Universe!" 🌌**
 
 <hr>
-  
-<p align="left">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" />
-</p>
-<p align="left">
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" />
-</p>
+
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td width="50%" valign="top" style="border: none;">
+      <img align="top" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" width="100%" style="border: none;" />
+    </td>
+    <td width="50%" valign="top" style="border: none;">
+      <img align="top" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" width="100%" style="border: none;" />
+    </td>
+  </tr>
+</table>
 
 <hr>
 
