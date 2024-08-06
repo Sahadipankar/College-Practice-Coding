@@ -1,5 +1,5 @@
 ![logo](https://github.com/Sahadipankar/Sahadipankar/blob/main/My%20Github%20Banner.png)
-<h1 align="center">Welcome to my GitHub Profile!<br>Hi 👋, I'm Dipankar Saha</h1>
+<h1 align="center">Welcome to my GitHub Profile!<br>Hi, 👋 I'm Dipankar Saha</h1>
 <h3 align="center">A passionate and aspiring Software Engineer based in Kolkata.<br>Every day is a new opportunity to learn and grow</h3>
 
 <img align="right" alt="coding" width="400" src="https://user-images.githubusercontent.com/55389276/140866485-8fb1c876-9a8f-4d6a-98dc-08c4981eaf70.gif">
@@ -9,6 +9,8 @@
 - 🔭 I’m currently pursuing my **BCA - Hons**
 
 - 👨‍💻 All of my projects are available at [GitHub](https://github.com/Sahadipankar/College-Practice-Coding)
+
+<hr>
   
 - <h3 align="left">Languages and Tools:</h3>
 <p align="left">
@@ -50,6 +52,8 @@
   </a>
 </p>
 
+<hr>
+
 - 💬 Ask me about:
   - **C**
   - **Python**
@@ -60,7 +64,9 @@
   - **HTML**
   - **CSS**
   - **Arduino**
-    
+
+<hr>
+  
 - 🌱 I’m currently learning **Java and DBMS**
   
 <h3 align="left">GitHub Stats:</h3>
@@ -68,10 +74,24 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" />
 </p>
 
+<hr>
+  
 - 📫 How to reach me **[Email](mailto:sahadepankar@gmail.com)**
 
 - 💡 Fun fact<br>
+
   **Did you know? My first program was a "Hello World!" script. Now, I dream of creating AI that says "Hello Universe!" 🌌**
+
+<hr>
+  
+<p align="left">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" />
+</p>
+<p align="left">
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" />
+</p>
+
+<hr>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -83,12 +103,7 @@
   </a>
   <a href="https://instagram.com/akash_.raj" target="blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="akash_.raj" height="30" width="40" />
-  </a>
+  </a><br>
 </p>
 
-<p align="left">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" />
-</p>
-<p align="left">
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" />
-</p>
+**[Email](mailto:sahadepankar@gmail.com)**
