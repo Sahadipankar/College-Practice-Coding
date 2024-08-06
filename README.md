@@ -72,9 +72,9 @@
         <li><strong>Arduino</strong></li>
       </ul>
     </td>
-    <td width="1000" valign="top" style="border: none;">
+    <td width="900" valign="center" style="border: none;">
       <h3>GitHub Stats:</h3>
-      <img align="top" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" width="100%" style="border: none;" />
+      <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=sahadipankar&show_icons=true&locale=en&layout=compact" alt="sahadipankar" width="100%" style="border: none;" />
     </td>
   </tr>
 </table>
@@ -95,7 +95,7 @@
     <td width="50%" valign="top" style="border: none;">
       <img align="top" src="https://github-readme-stats.vercel.app/api?username=sahadipankar&show_icons=true&locale=en" alt="sahadipankar" width="100%" style="border: none;" />
     </td>
-    <td width="50%" valign="top" style="border: none;">
+    <td width="50%" valign="center" style="border: none;">
       <img align="top" src="https://github-readme-streak-stats.herokuapp.com/?user=sahadipankar&" alt="sahadipankar" width="100%" style="border: none;" />
     </td>
   </tr>
