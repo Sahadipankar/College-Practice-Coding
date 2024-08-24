@@ -1,0 +1,307 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left,
+.right {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.left {
+    width: 30%;
+    background-color: #e9ecef;
+}
+
+.right {
+    width: 65%;
+    background-color: #ffffff;
+}
+
+/* Image Styles */
+.image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Styles */
+.contact {
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 10px;
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Skills Styles */
+.skills {
+    margin-bottom: 20px;
+}
+
+.skills h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+}
+
+.skills li ul {
+    margin-left: 20px;
+}
+
+.skills li ul li {
+    margin-bottom: 5px;
+}
+
+/* Language Styles */
+.language {
+    margin-bottom: 20px;
+}
+
+.language h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.language ul {
+    list-style: none;
+    padding: 0;
+}
+
+.language li {
+    margin-bottom: 10px;
+}
+
+/* Hobbies Styles */
+.hobbies {
+    margin-bottom: 20px;
+}
+
+.hobbies h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hobbies li {
+    margin-bottom: 10px;
+}
+
+/* Certifications Styles */
+.certifications {
+    margin-bottom: 20px;
+}
+
+.certifications h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications li {
+    margin-bottom: 10px;
+}
+
+/* Name Styles */
+.name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.name h1 {
+    font-size: 28px;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.name h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Summary Styles */
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.summary p {
+    margin-bottom: 10px;
+}
+
+/* Experience Styles */
+.experience {
+    margin-bottom: 20px;
+}
+
+.experience h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.experience .job {
+    margin-bottom: 20px;
+}
+
+.experience h3 {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.experience p {
+    margin-bottom: 10px;
+}
+
+.experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience li {
+    margin-bottom: 10px;
+}
+
+/* Education Styles */
+.education {
+    margin-bottom: 20px;
+}
+
+.education h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.education table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.education th,
+.education td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.education th {
+    background-color: #f2f2f2;
+}
+
+/* Project Styles */
+.projects {
+    margin-bottom: 20px;
+}
+
+.projects h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.projects .project {
+    margin-bottom: 20px;
+}
+
+.projects h3 {
+    font-size: 18px;
+    color: #007bff;
+}
+
+.projects p {
+    margin-bottom: 10px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects li {
+    margin-bottom: 10px;
+}
+
+/* Acknowledgement Styles */
+.acknowledgement {
+    margin-bottom: 20px;
+}
+
+.acknowledgement h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.acknowledgement p {
+    margin-bottom: 10px;
+}
