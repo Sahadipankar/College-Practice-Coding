@@ -1,0 +1,255 @@
+DBMS Assignment 1
+
+
+-- Creating the STUD_MEMBER table
+CREATE TABLE STUD_MEMBER (
+    Roll_no VARCHAR(16),
+    Name VARCHAR(20),
+    Dept_id NUMBER(2),
+    Sem NUMBER(1),
+    Contact_No NUMBER(10),
+    Gender VARCHAR(1)
+);
+
+
+
+SELECT * FROM STUD_MEMBER;
+
+SELECT * FROM STUD_DETAILS;
+
+SELECT * FROM DEPARTMENT;
+
+
+
+-- Inserting data into STUD_MEMBER table
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BIT/19/01', 'Ankur Das', 1, 1, 271210011, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BIT/19/02', 'Kamal Saha', 1, 1, 2321222211, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BIT/19/03', 'Ankita Banerjee', 1, 1, 1121213311, 'F');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BEE/19/01', 'Kamal Nandy', 2, 3, 1231233344, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BCE/19/08', 'Amit Saha', 3, 3, 4536677667, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BEE/19/014', 'Avijit Ghosh', 2, 1, 3232327643, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BEE/19/09', 'Ganesh Sill', 2, 3, 1242447643, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BCE/19/05', 'Sheta Thakur', 3, 1, 1242447644, 'F');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BCE/19/012', 'Puja Patra', 3, 3, 6463426789, 'F');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BEE/19/015', 'Kamal Halder', 2, 3, 3286562345, 'M');
+
+INSERT INTO STUD_MEMBER (Roll_no, Name, Dept_id, Sem, Contact_no, Gender)
+VALUES ('BWU/BME/19/06', 'Kiran Das', 5, 1, 2574225678, 'F');
+
+
+
+-- Altering STUD_MEMBER to enforce the semester constraint
+ALTER TABLE STUD_MEMBER
+ADD CONSTRAINT sem_range CHECK (Sem > 0 AND Sem < 9);
+
+
+
+
+-- Trying to insert a duplicate entry
+INSERT INTO STUD_MEMBER (Roll_no, Name, Sem, Dept_id, Contact_no, Gender)
+VALUES ('BWU/BIT/19/01', 'Ankur Das', 1, 1, 271210011, 'M');
+
+-- Observation: Since no primary key has been enforced yet, the duplicate row will be inserted.
+
+
+
+-- Renaming the Contact_no column to Mobile_No
+ALTER TABLE STUD_MEMBER
+RENAME COLUMN Contact_no TO Mobile_No;
+
+
+
+DELETE FROM STUD_MEMBER
+WHERE Roll_no = 'BWU/BIT/19/01'
+AND Name = 'Ankur Das'
+AND ROWNUM = 1;
+
+
+-- Adding Roll_no as the primary key
+ALTER TABLE STUD_MEMBER
+ADD CONSTRAINT pk_roll_no PRIMARY KEY (Roll_no);
+
+
+
+-- Displaying the names and mobile numbers of all students
+SELECT Name, Mobile_No FROM STUD_MEMBER;
+
+
+
+-- Creating STUD_DETAILS with the same structure and data
+CREATE TABLE STUD_DETAILS AS SELECT * FROM STUD_MEMBER;
+
+
+
+-- Renaming Contact_No to Ph_No in STUD_DETAILS
+ALTER TABLE STUD_DETAILS
+RENAME COLUMN Mobile_No TO Ph_No;
+
+
+
+-- Updating phone number of Pooja Patra
+UPDATE STUD_DETAILS
+SET Ph_No = 03325345666
+WHERE Name = 'Puja Patra';
+
+
+
+-- Attempting to insert a student without Roll_no
+INSERT INTO STUD_MEMBER (Name, Sem, Dept_id, Mobile_No, Gender)
+VALUES ('John Doe', 2, 1, 9999999999, 'M');
+
+-- Observation: It will throw an error because Roll_no is a primary key and cannot be NULL.
+
+
+
+-- Displaying information for students whose name starts with 'A'
+SELECT * FROM STUD_MEMBER WHERE Name LIKE 'A%';
+
+
+
+-- Displaying all details of male members
+SELECT * FROM STUD_MEMBER WHERE Gender = 'M';
+
+
+
+-- Displaying all students currently in semester 3
+SELECT * FROM STUD_MEMBER WHERE Sem = 3;
+
+
+
+-- Displaying all female students in alphabetical order
+SELECT * FROM STUD_MEMBER WHERE Gender = 'F' ORDER BY Name;
+
+
+
+-- Displaying students whose name starts with 'A' and is at least 5 characters long
+SELECT * FROM STUD_MEMBER WHERE Name LIKE 'A%' AND LENGTH(Name) >= 5;
+
+
+
+-- Extracting only the numeric part of Avijit Ghosh’s Roll_no
+SELECT REGEXP_REPLACE(Roll_no, '[^0-9]', '') AS Numeric_Roll_No
+FROM STUD_MEMBER
+WHERE Name = 'Avijit Ghosh';
+
+
+
+-- Creating the DEPARTMENT table
+CREATE TABLE DEPARTMENT (
+    Dept_id NUMBER(2),
+    Dept_Name VARCHAR(50)
+);
+
+
+
+-- Adding primary key to Dept_id
+ALTER TABLE DEPARTMENT
+ADD CONSTRAINT pk_dept PRIMARY KEY (Dept_id);
+
+
+
+-- Populating DEPARTMENT with data
+INSERT INTO DEPARTMENT (Dept_id, Dept_name) VALUES (1, 'Information Technology');
+INSERT INTO DEPARTMENT (Dept_id, Dept_name) VALUES (2, 'Electrical');
+INSERT INTO DEPARTMENT (Dept_id, Dept_name) VALUES (3, 'Civil');
+INSERT INTO DEPARTMENT (Dept_id, Dept_name) VALUES (4, 'Mechanical');
+INSERT INTO DEPARTMENT (Dept_id, Dept_name) VALUES (5, 'Electronics');
+
+
+
+-- Adding foreign key to Dept_id in STUD_MEMBER
+ALTER TABLE STUD_MEMBER
+ADD CONSTRAINT fk_dept FOREIGN KEY (Dept_id) REFERENCES DEPARTMENT(Dept_id);
+
+
+
+-- Adding a new column Dept_loc to DEPARTMENT
+ALTER TABLE DEPARTMENT
+ADD Dept_loc VARCHAR2(10);
+
+
+
+-- Update the Dept_loc for each department
+UPDATE DEPARTMENT
+SET Dept_loc = 'Kolkata'
+WHERE Dept_id = 1;
+
+UPDATE DEPARTMENT
+SET Dept_loc = 'Barasat'
+WHERE Dept_id = 2;
+
+UPDATE DEPARTMENT
+SET Dept_loc = 'Barasat'
+WHERE Dept_id = 3;
+
+UPDATE DEPARTMENT
+SET Dept_loc = 'Kolkata'
+WHERE Dept_id = 4;
+
+UPDATE DEPARTMENT
+SET Dept_loc = 'Barasat'
+WHERE Dept_id = 5;
+
+
+
+-- Displaying names and roll numbers of IT students
+SELECT Name, Roll_no FROM STUD_MEMBER WHERE Dept_id = 1;
+
+
+
+-- Displaying all department names
+SELECT Dept_name FROM DEPARTMENT;
+
+
+
+-- Finding the department of Amit Saha using a subquery
+SELECT Dept_name 
+FROM DEPARTMENT
+WHERE Dept_id = (
+    SELECT Dept_id 
+    FROM STUD_MEMBER 
+    WHERE Name = 'Amit Saha'
+);
+
+
+
+-- Display all students from departments located in Kolkata
+SELECT * 
+FROM STUD_MEMBER
+WHERE Dept_id IN (
+    SELECT Dept_id 
+    FROM DEPARTMENT 
+    WHERE Dept_loc = 'Kolkata'
+);
+
+
+
+-- Trying to delete Electronics department
+DELETE FROM DEPARTMENT WHERE Dept_name = 'Electronics';
+
+-- Observation: If there are students in the Electronics department, the deletion will fail due to foreign key constraint.
+
+
+
+-- Deleting Electronics from DEPARTMENT (if no foreign key constraint issue)
+DELETE FROM DEPARTMENT WHERE Dept_name = 'Electronics';
+
