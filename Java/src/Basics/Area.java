@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.Scanner;
 
 class Rec {
@@ -41,5 +43,6 @@ public class Area {
 
 	obj2.findAreaOfCir(15);
 	obj2.outputAreaOfCir();
+	sc.close();
 	}
 }

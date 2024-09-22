@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.*;
 
 public class SumAvg {
@@ -21,5 +23,6 @@ public class SumAvg {
 	
 	System.out.println("\nThe summation marks of 5 subject is " + (sub1+sub2+sub3+sub4+sub5));
 	System.out.println("\nThe Average marks of 5 subject is " + ((sub1+sub2+sub3+sub4+sub5)/5));
+	sc.close();
 	}
 }

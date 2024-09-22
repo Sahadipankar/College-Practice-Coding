@@ -1,8 +1,10 @@
+package Basics;
+
 class Myclass {
 	int height;
 	
 	Myclass () {
-	System.out.println ("Height: ");
+	System.out.println ("\nHeight: ");
 	height = 10;
 	}
 
@@ -26,5 +28,6 @@ public class Height_Constructor {
 	c.Show ();
 	c.Show ("\nOverload Method");
 	Myclass c1 = new Myclass();
+	c1.Show();
 	}
 }

@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.*;
 
 public class Prime {
@@ -24,6 +26,7 @@ public class Prime {
 			}
 		else System.out.print("\n" + num + " is a Prime number.");	
 		}
+		sc.close();
 	}
 }
 	

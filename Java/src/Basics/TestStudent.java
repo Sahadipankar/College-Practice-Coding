@@ -1,3 +1,5 @@
+package Basics;
+
 class Student {
 	int rollNo;
 	String name, course;

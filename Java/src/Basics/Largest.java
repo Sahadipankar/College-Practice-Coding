@@ -1,3 +1,5 @@
+package Basics;
+
 import java.util.*;
 
 public class Largest {
@@ -22,5 +24,6 @@ public class Largest {
 	else {
 		System.out.println("\n" + third + " is the Largest Number");
 		}
+		sc.close();
 	}
 }
