@@ -1,0 +1,135 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .todo-container {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0,
+                0, 0, 0.1);
+        border-radius: 8px;
+        width: 400px;
+        max-width: 90%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    #taskInput {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    #addTaskButton {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #28a745;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #addTaskButton:hover {
+        background-color: #218838;
+    }
+
+    ul#taskList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 250px;
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+        overflow-y: auto;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f8f9fa;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+        background: #e9ecef;
+    }
+
+    button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #c82333;
+    }
+
+    .completed {
+        text-decoration: line-through;
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    #taskCount {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    #clearAllButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 50px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0,
+                0, 0, 0.2);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #clearAllButton:hover {
+        background-color: #0056b3;
+        box-shadow: 0px 6px 12px rgba(0,
+                0, 0, 0.3);
+    }
