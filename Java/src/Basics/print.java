@@ -1,9 +1,7 @@
 package Basics;
 
-class print
-{
-public static void main (String[] args)
-{
- System.out.print("HELLO");
- }
+public class Print {
+    public static void main(String args[]) {
+        System.out.print("Hello World!");
+    }
 }
