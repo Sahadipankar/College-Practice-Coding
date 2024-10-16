@@ -25,7 +25,7 @@ class Check_Prime {
     }
 
     public void calc_prime() {
-        System.out.print("\nPrime numbers added in the range: ");
+        System.out.print("\nPrime numbers present in the range: ");
         for (int i = lb; i <= ub; i++) {
             if (isPrime(i)) {
                 primeSum += i;
