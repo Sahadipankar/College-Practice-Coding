@@ -7,9 +7,9 @@ class Book {
 
     // // Constructor to initialize the Book object with title, author, and price
     // public Book(String title, String author, double price) {
-    //     this.title = title;
-    //     this.author = author;
-    //     this.price = price;
+    // this.title = title;
+    // this.author = author;
+    // this.price = price;
     // }
 
     // Getter and setter methods for encapsulation
@@ -44,7 +44,7 @@ class Shop {
 
 public class BookStore {
     public static void main(String[] args) {
-        
+
         // // Create a new book object using the constructor
         // Book book1 = new Book("Java Programming", "John Doe", 29.99);
 
