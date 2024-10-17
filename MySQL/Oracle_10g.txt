@@ -253,3 +253,126 @@ DELETE FROM DEPARTMENT WHERE Dept_name = 'Electronics';
 -- Deleting Electronics from DEPARTMENT (if no foreign key constraint issue)
 DELETE FROM DEPARTMENT WHERE Dept_name = 'Electronics';
 
+
+
+
+
+
+
+
+
+
+
+DBMS Assignment 2
+
+
+
+CREATE TABLE MATCH (
+    MATCH_ID NUMBER PRIMARY KEY, 
+    Team1 VARCHAR(50),
+    Team2 VARCHAR(50),
+    Ground VARCHAR(50),
+    Play_Date DATE,
+    Winner VARCHAR(50)
+);
+
+
+
+CREATE TABLE PLAYER (
+    PLAYER_ID NUMBER PRIMARY KEY,
+    LNAME VARCHAR (50),
+    FNAME VARCHAR (50),
+    COUNTRY VARCHAR (50),
+    YBORN NUMBER (4),
+    BPLACE VARCHAR (50),
+    FTEST NUMBER (4)
+);
+
+
+
+CREATE TABLE Bowling (
+    Match_Id NUMBER,
+    Player_Id NUMBER,
+    Novers NUMBER,
+    Maidens NUMBER,
+    Nrun_rcv NUMBER,
+    Nwickets NUMBER
+);
+
+
+
+CREATE TABLE Batting (
+    Match_Id NUMBER,
+    Player_Id NUMBER,
+    Nrun_sc NUMBER
+);
+
+
+
+-- Add foreign key constraint for Match_Id referencing Match table
+ALTER TABLE Bowling
+ADD CONSTRAINT fk_bowling_match
+FOREIGN KEY (Match_Id)
+REFERENCES Match(Match_Id);
+
+
+
+-- Add foreign key constraint for Player_Id referencing Player table
+ALTER TABLE Bowling
+ADD CONSTRAINT fk_bowling_player
+FOREIGN KEY (Player_Id)
+REFERENCES Player(Player_Id);
+
+
+
+-- Add foreign key constraint for Match_Id referencing Match table
+ALTER TABLE Batting
+ADD CONSTRAINT fk_batting_match
+FOREIGN KEY (Match_Id)
+REFERENCES Match(Match_Id);
+
+
+
+-- Add foreign key constraint for Player_Id referencing Player table
+ALTER TABLE Batting
+ADD CONSTRAINT fk_batting_player
+FOREIGN KEY (Player_Id)
+REFERENCES Player(Player_Id);
+
+
+
+INSERT INTO Match (Match_Id, Team1, Team2, Ground, Play_Date, Winner) VALUES (2475, 'Australia', 'India', 'Melbourne', TO_DATE('10-FEB-2008', 'DD-MON-YYYY'), 'Team2');
+INSERT INTO Match (Match_Id, Team1, Team2, Ground, Play_Date, Winner) VALUES (2576, 'India', 'Srilanka', 'Adelaide', TO_DATE('19-FEB-2008', 'DD-MON-YYYY'), 'Team1');
+INSERT INTO Match (Match_Id, Team1, Team2, Ground, Play_Date, Winner) VALUES (2677, 'Australia', 'India', 'Sydney', TO_DATE('02-MAR-2008', 'DD-MON-YYYY'), 'Team1');
+INSERT INTO Match (Match_Id, Team1, Team2, Ground, Play_Date, Winner) VALUES (2778, 'Australia', 'Srilanka', 'Brisbane', TO_DATE('04-MAR-2008', 'DD-MON-YYYY'), 'Team2');
+INSERT INTO Match (Match_Id, Team1, Team2, Ground, Play_Date, Winner) VALUES (2879, 'Srilanka', 'India', 'Colombo', TO_DATE('27-AUG-2008', 'DD-MON-YYYY'), 'Team2');
+
+
+
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (49001, 'Tendulkar', 'Sachin', 'India', 1973, 'Mumbai', 1986);
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (49002, 'Dravid', 'Rahul', 'India', 1973, 'Indore', 1996);
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (59001, 'Vass', 'Chaminda', 'Srilanka', 1974, 'Mattumagala', 1994);
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (59002, 'Jayasuriya', 'Sanath', 'Srilanka', 1969, 'Matara', 1991);
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (69001, 'Lee', 'Brett', 'Australia', 1976, 'Wollongong', 1999);
+INSERT INTO Player (Player_Id, Lname, Fname, Country, Yborn, Bplace, Ftest) VALUES (69002, 'Symonds', 'Andrew', 'Australia', 1975, 'Birmingham', 2004);
+
+
+
+INSERT INTO Bowling (Match_Id, Player_Id, Novers, Maidens, Nrun_rcv, Nwickets) VALUES (2576, 59001, 8, 3, 58, 1);
+INSERT INTO Bowling (Match_Id, Player_Id, Novers, Maidens, Nrun_rcv, Nwickets) VALUES (2677, 69001, 10, 1, 27, 3);
+INSERT INTO Bowling (Match_Id, Player_Id, Novers, Maidens, Nrun_rcv, Nwickets) VALUES (2879, 49002, 7, 0, 44, 0);
+INSERT INTO Bowling (Match_Id, Player_Id, Novers, Maidens, Nrun_rcv, Nwickets) VALUES (2576, 49001, 3, 2, 15, 1);
+INSERT INTO Bowling (Match_Id, Player_Id, Novers, Maidens, Nrun_rcv, Nwickets) VALUES (2778, 59001, 7, 1, 20, 5);
+
+
+
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2677, 49001, 60);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2778, 59002, 71);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2879, 59001, 60);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2778, 69002, 17);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2879, 59002, 45);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2576, 49001, 36);
+INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2475, 49002, 72);
+
+
+
