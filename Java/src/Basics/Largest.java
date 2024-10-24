@@ -18,7 +18,7 @@ public class Largest {
 	if (first > second && first > third) {
 		System.out.println("\n" + first + " is the Largest Number");
 		}
-	else if (second > first && first > third) {
+	else if (second > first && second > third) {
 		System.out.println("\n" + second + " is the Largest Number");
 		}
 	else {

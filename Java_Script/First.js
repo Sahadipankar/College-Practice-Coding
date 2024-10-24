@@ -19,9 +19,9 @@ console.log(typeof amazonProduct["isDeal"]);
 console.log(typeof amazonProduct["price"]);
 console.log(typeof amazonProduct["offer"]);
 
-// let num = prompt("Enter a number.");
-// if (num % 5 == 0) console.log(num, "is a multiple of 5.");
-// else console.log(num, "is not a multiple of 5.");
+let num = prompt("Enter a number.");
+if (num % 5 == 0) console.log(num, "is a multiple of 5.");
+else console.log(num, "is not a multiple of 5.");
 
 let data = document.querySelector("h2");
 console.dir(data);
