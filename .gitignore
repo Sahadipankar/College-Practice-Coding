@@ -3,3 +3,4 @@ Java/bin
 Java/.vscode
 Java/lib
 Python/Jupyter Notebook/.ipynb_checkpoints
+*.exe
