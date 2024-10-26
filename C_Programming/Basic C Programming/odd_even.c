@@ -7,10 +7,10 @@ int main () {
     scanf("%d", &n);
     
     if (n % 2 == 0) {
-        printf("\nThis is an Even number");
+        printf("\n%d is an Even number", n);
     }
     else 
-    printf("\nThis is a Odd number");
+    printf("\n%d is a Odd number", n);
     
     return 0;
     
