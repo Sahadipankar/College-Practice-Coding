@@ -72,27 +72,27 @@
 
 
 
-let count50_59 = 0;
-let count60_69 = 0;
-let count70_79 = 0;
-let count80_89 = 0;
-let count90_100 = 0; 
+// let count50_59 = 0;
+// let count60_69 = 0;
+// let count70_79 = 0;
+// let count80_89 = 0;
+// let count90_100 = 0; 
 
-for (let i = 0; i < 20; i++) {
-    let min = 50;
-    let max = 100;
-    let random = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(random);  // This will give a random number between 50 and 100
+// for (let i = 0; i < 20; i++) {
+//     let min = 50;
+//     let max = 100;
+//     let random = Math.floor(Math.random() * (max - min + 1)) + min;
+//     console.log(random);  // This will give a random number between 50 and 100
 
-    if (random >= 50 && random <= 59) count50_59++;
-    else if (random >= 60 && random <= 69) count60_69++;
-    else if (random >= 70 && random <= 79) count70_79++;
-    else if (random >= 80 && random <= 89) count80_89++;
-    else if (random >= 90 && random <= 100) count90_100++;
-}
+//     if (random >= 50 && random <= 59) count50_59++;
+//     else if (random >= 60 && random <= 69) count60_69++;
+//     else if (random >= 70 && random <= 79) count70_79++;
+//     else if (random >= 80 && random <= 89) count80_89++;
+//     else if (random >= 90 && random <= 100) count90_100++;
+// }
 
-console.log(`50-59: ${count50_59}`);
-console.log(`60-69: ${count60_69}`);
-console.log(`70-79: ${count70_79}`);
-console.log(`80-89: ${count80_89}`);
-console.log(`90-100: ${count90_100}`);
+// console.log(`50-59: ${count50_59}`);
+// console.log(`60-69: ${count60_69}`);
+// console.log(`70-79: ${count70_79}`);
+// console.log(`80-89: ${count80_89}`);
+// console.log(`90-100: ${count90_100}`);
