@@ -376,6 +376,8 @@ INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2475, 49002, 72);
 
 
 
+1. a) Find the ground of the matches batted by player whose Fname is starting from ‘S’.
+
 SELECT DISTINCT M.Ground
 FROM Match M
 JOIN Batting B ON M.Match_Id = B.Match_Id
@@ -383,6 +385,8 @@ JOIN Player P ON B.Player_Id = P.Player_Id
 WHERE P.Fname LIKE 'S%';
 
 
+
+b) Find Id’s of player that have bowled in the match 2576 but not have batted.
 
 SELECT B.Player_Id
 FROM Bowling B
@@ -395,6 +399,8 @@ AND B.Player_Id NOT IN (
 
 
 
+c) Find the batting average of each Indian player along with the Player_Id
+
 SELECT P.Player_Id, P.Fname, P.Lname, 
        SUM(B.Nrun_sc) / COUNT(B.Match_Id) AS Batting_Avg
 FROM Player P
@@ -403,6 +409,9 @@ WHERE P.Country = 'India'
 GROUP BY P.Player_Id, P.Fname, P.Lname;
 
 
+
+d) Find the name of that player who has bowled highest number of overs and also find the
+ground where he has bowled.
 
 SELECT P.Player_id, P.Fname, P.Lname, M.Ground, MAX(B.Novers) AS Max_Overs
 FROM Bowling B
@@ -413,6 +422,8 @@ ORDER BY Max_Overs DESC;
 
 
 
+2. a) Find the total run scored by a player who played First Test in 1991.
+
 SELECT P.Player_Id, P.Fname, P.Lname, SUM(B.Nrun_sc) AS Total_Runs
 FROM Player P
 JOIN Batting B ON P.Player_Id = B.Player_Id
@@ -421,8 +432,75 @@ GROUP BY P.Player_Id, P.Fname, P.Lname;
 
 
 
+b) Find the name and the number of wickets taken by the youngest player in the data base.
+
 SELECT P.Fname, P.Lname, COALESCE(SUM(B.Nwickets), 0) AS Wickets
 FROM Player P
 LEFT JOIN Bowling B ON P.Player_Id = B.Player_Id
 WHERE P.YBORN = (SELECT MIN(YBORN) FROM Player)
 GROUP BY P.Player_Id, P.Fname, P.Lname;
+
+
+
+c) Find the names of the players who batted in only one match.
+
+SELECT P.Fname, P.Lname
+FROM Player P
+JOIN Batting B ON P.Player_Id = B.Player_Id
+GROUP BY P.Player_Id, P.Fname, P.Lname
+HAVING COUNT(B.Match_Id) = 1;
+
+
+
+d) Find the name of the player who has taken the highest wickets in a particular match andalso
+find the ground where the player has taken the wickets.
+
+SELECT P.Fname, P.Lname, M.Ground, B.Nwickets
+FROM Bowling B
+JOIN Player P ON B.Player_Id = P.Player_Id
+JOIN Match M ON B.Match_Id = M.Match_Id
+WHERE (B.Match_Id, B.Nwickets) IN (
+    SELECT B.Match_Id, MAX(B.Nwickets)
+    FROM Bowling B
+    GROUP BY B.Match_Id
+)
+ORDER BY B.Nwickets DESC;
+
+
+
+3. a) Find the ground where Sachin Tendulkar has scored his highest run.
+
+SELECT M.Ground, MAX(B.Nrun_sc) AS Highest_Run
+FROM Batting B
+JOIN Player P ON B.Player_Id = P.Player_Id
+JOIN Match M ON B.Match_Id = M.Match_Id
+WHERE P.Fname = 'Sachin' AND P.Lname = 'Tendulkar'
+GROUP BY M.Ground;
+
+
+
+b) Find out the name of a Srilankan bowler who has delivered at least 2 maiden overs.
+
+SELECT P.Fname, P.Lname
+FROM Bowling B
+JOIN Player P ON B.Player_Id = P.Player_Id
+WHERE P.Country = 'Srilanka' AND B.Maidens >= 2;
+
+
+
+c) Find the Number of wickets of that player whose Birth place in Mattumagala.
+
+SELECT SUM(B.Nwickets) AS Total_Wickets
+FROM Bowling B
+JOIN Player P ON B.Player_Id = P.Player_Id
+WHERE P.Bplace = 'Mattumagala';
+
+
+
+d) Find the names of the players who played in more than one matches.
+
+SELECT P.Fname, P.Lname
+FROM Player P
+JOIN Batting B ON P.Player_Id = B.Player_Id
+GROUP BY P.Player_Id, P.Fname, P.Lname
+HAVING COUNT(B.Match_Id) > 1;
