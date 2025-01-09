@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        /* Basic styling for the body and the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Default background is white */
+    color: black; /* Default text color is black */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Toggle button container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the default checkbox */
+.toggle-checkbox {
+    display: none;
+}
+
+/* Styling for the switch (toggle) */
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background-color: black; /* Initially, black background when the button is inactive */
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Circle inside the toggle */
+.toggle-label::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background-color: white; /* Circle is white initially */
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Active state: when the checkbox is checked */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: white; /* Outer part turns white */
+}
+
+.toggle-checkbox:checked + .toggle-label::before {
+    transform: translateX(30px); /* Move circle to the right */
+    background-color: black; /* Circle turns black when active */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* India time (above the toggle) */
+.static-text {
+    font-size: 65px; /* Increased font size (+5) */
+    font-weight: bold;
+    color: black; /* Always black */
+    margin-bottom: 20px; /* Added more space below the text */
+    text-align: center;
+}
+
+/* USA time (below the toggle) */
+.static-text-below {
+    font-size: 65px; /* Increased font size (+5) */
+    font-weight: bold;
+    color: white; /* Always white */
+    margin-top: 20px; /* Added more space above the text */
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <p id="india-time" class="static-text">00:00:00</p>
+    <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label"></label>
+    </div>
+    <p id="usa-time" class="static-text-below">00:00:00</p>
+</div>
+<script>
+// Get the toggle checkbox and the body element
+const toggleCheckbox = document.getElementById('toggle');
+const body = document.body;
+const toggleLabel = document.querySelector('.toggle-label');
+
+// Add event listener for toggle checkbox change
+toggleCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        // When toggle is on (checked)
+        body.style.backgroundColor = 'black'; // Set body background to black
+        body.style.color = 'white'; // Change text color to white
+        toggleLabel.style.backgroundColor = 'white'; // Set toggle outer part to white
+    } else {
+        // When toggle is off (unchecked)
+        body.style.backgroundColor = 'white'; // Set body background to white
+        body.style.color = 'black'; // Set text color to black
+        toggleLabel.style.backgroundColor = 'black'; // Set toggle outer part to black
+    }
+});
+// Get the elements for time display
+const indiaTimeElement = document.getElementById('india-time');
+const usaTimeElement = document.getElementById('usa-time');
+
+/// Function to update times
+function updateTime() {
+    const now = new Date();
+
+    // India time (GMT+5:30)
+    const indiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
+    indiaTimeElement.textContent = indiaTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+    // USA time (GMT-5:00, New York)
+    const usaTime = new Date(now.toLocaleString("en-US", { timeZone: "America/New_York" }));
+    usaTimeElement.textContent = usaTime.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+}
+
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial time update
+updateTime();
+</script>
+</body>
+</html>

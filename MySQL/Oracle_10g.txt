@@ -376,3 +376,53 @@ INSERT INTO Batting (Match_Id, Player_Id, Nrun_sc) VALUES (2475, 49002, 72);
 
 
 
+SELECT DISTINCT M.Ground
+FROM Match M
+JOIN Batting B ON M.Match_Id = B.Match_Id
+JOIN Player P ON B.Player_Id = P.Player_Id
+WHERE P.Fname LIKE 'S%';
+
+
+
+SELECT B.Player_Id
+FROM Bowling B
+WHERE B.Match_Id = 2576
+AND B.Player_Id NOT IN (
+    SELECT Bat.Player_Id
+    FROM Batting Bat
+    WHERE Bat.Match_Id = 2576
+);
+
+
+
+SELECT P.Player_Id, P.Fname, P.Lname, 
+       SUM(B.Nrun_sc) / COUNT(B.Match_Id) AS Batting_Avg
+FROM Player P
+JOIN Batting B ON P.Player_Id = B.Player_Id
+WHERE P.Country = 'India'
+GROUP BY P.Player_Id, P.Fname, P.Lname;
+
+
+
+SELECT P.Player_id, P.Fname, P.Lname, M.Ground, MAX(B.Novers) AS Max_Overs
+FROM Bowling B
+JOIN Player P ON B.Player_Id = P.Player_Id
+JOIN Match M ON B.Match_Id = M.Match_Id
+GROUP BY P.Player_Id, P.Fname, P.Lname, M.Ground
+ORDER BY Max_Overs DESC;
+
+
+
+SELECT P.Player_Id, P.Fname, P.Lname, SUM(B.Nrun_sc) AS Total_Runs
+FROM Player P
+JOIN Batting B ON P.Player_Id = B.Player_Id
+WHERE P.Ftest = 1991
+GROUP BY P.Player_Id, P.Fname, P.Lname;
+
+
+
+SELECT P.Fname, P.Lname, COALESCE(SUM(B.Nwickets), 0) AS Wickets
+FROM Player P
+LEFT JOIN Bowling B ON P.Player_Id = B.Player_Id
+WHERE P.YBORN = (SELECT MIN(YBORN) FROM Player)
+GROUP BY P.Player_Id, P.Fname, P.Lname;
