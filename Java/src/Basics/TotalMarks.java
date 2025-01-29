@@ -11,7 +11,7 @@ public class TotalMarks {
             System.out.print("\nEnter the Total Marks: ");
             int marks = sc.nextInt();
             if (marks >= 90 && marks <= 100) {
-                System.out.println("\nnThis is Excellent");
+                System.out.println("\nThis is Excellent");
             } else if (marks >= 60 && marks <= 89) {
                 System.out.println("\nThis is also Good");
             } else if (marks >= 35 && marks <= 59) {
