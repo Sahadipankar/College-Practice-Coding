@@ -19,6 +19,9 @@
 // let arr = [1, 2, 3, 4, 5, 6]; // Array of numbers
 // console.log(arr);
 
+
+
+
 // // Using map() method to iterate over the array
 // let brr = arr.map(function(ele){        //This is called callback function passing function as an argument
 //     return ele * ele; // Square of each element
@@ -40,6 +43,8 @@
 //         return true;
 //     }
 // });
+
+
 
 // let crr = arr.filter(ele => ele % 2 != 0); // Using Arrow Function (_=>_) to filter out the odd numbers (Shortcut)
 
