@@ -1,0 +1,75 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Game Container */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Input Fields */
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Placeholder Centering */
+input::placeholder {
+    text-align: center;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Result Messages */
+.success {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.hint {
+    font-size: 18px;
+    color: #e67e22;
+}
+
+/* Restart Button */
+.restart-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.restart-btn:hover {
+    background: #0056b3;
+}

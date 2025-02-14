@@ -80,6 +80,9 @@ let interval = setInterval (function() {
     if (i === 3) clearInterval (interval);
 }, 2000);
 
+console.log("\n", interval);
+
+
 // //How to create a file in NodeJS
 // const fs = require ('fs');
 // fs.writeFileSync ('Hello.txt', "Hello World, This is Raj");
