@@ -23,6 +23,9 @@ function add (a, b) {
     return a + b;
 }
 
+let arrowAdd = (x, y) => console.log(x + y);  //Arrow function to add two numbers
+arrowAdd(10, 90);
+
 let a = 10;
 let b = 20;
 console.log ("\nAddition of ", a, " and ", b, " is: ", add (a, b));
@@ -45,6 +48,9 @@ let employee = {
     Emp_address: "1234, 5th Street, Toronto",
     Greet: function() {
         console.log ("\nHello, I am ", this.Emp_name, "and my age is: ", this.Emp_age, "\nI live in ", this.Emp_address);
+
+        console.log (`\nHello, I am ${this.Emp_name} and my age is: ${this.Emp_age} \nI live in ${this.Emp_address}`);  //Backtick 
+
     }
 }
 
@@ -56,6 +62,8 @@ console.log ("\nFruits: ", fruits);
 fruits.forEach (function(ele) {
     console.log (ele);
 });
+
+fruits.forEach((ele) => console.log(`\n ${ele}`));
 
 //Set Timeout 
 setTimeout (function() {
