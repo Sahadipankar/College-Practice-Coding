@@ -207,7 +207,7 @@ WHERE Dept_id = (SELECT Dept_id FROM stud_member WHERE Name = 'Amit Saha');
 
 -- Select students from Kolkata branch
 SELECT Name, Roll_no FROM stud_member 
-WHERE Dept_id IN (SELECT Dept_id FROM department WHERE Dept_loc = 'Kolkata');
+WHERE Dept_id IN (SELECT Dept_id FROM department WHERE Dept_loc = 'stud_detailsstud_detailsstud_detailsstud_memberKolkata');
 
 
 -- Select students in Information Technology
@@ -219,3 +219,7 @@ WHERE Dept_id = 1;
 DELETE FROM department 
 WHERE Dept_name = 'Electronics';
 
+    
+select * from department;
+select * from stud_details;
+select * from stud_member;
