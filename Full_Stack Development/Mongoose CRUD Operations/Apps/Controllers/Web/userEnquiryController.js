@@ -1,4 +1,4 @@
-const enquiryModel = require("../../Models/enquiry.model");
+const enquiryModel = require("../../Models/enquiry.model"); // Import enquiry model
 
 
 //  Insert enquiry data
