@@ -1,13 +1,13 @@
-let express = require("express");
-const { dbConnection } = require("./dbConnection");
-const { ObjectId } = require("mongodb");
-let app = express();
+let express = require("express");   // Importing express framework
+const { dbConnection } = require("./dbConnection"); // Importing the dbConnection function from dbConnection.js 
+const { ObjectId } = require("mongodb");    // To use ObjectId for MongoDB document ID
+let app = express();    // Creating an instance of express
 
-app.use(express.json());
+app.use(express.json());    // To parse JSON data from the request body
 
 
 
-app.get("/student-read", async (req, res) =>{
+app.get("/student-read", async (req, res) =>{   // Fetching all student data from the database
     let myDB = await dbConnection();
     let studentCollection = myDB.collection("Student");
     let data = await studentCollection.find().toArray();
@@ -23,7 +23,7 @@ app.get("/student-read", async (req, res) =>{
 
 
 
-app.post("/student-insert", async (req, res) => {
+app.post("/student-insert", async (req, res) => {   // Inserting student data into the database
     let myDB = await dbConnection();
     let studentCollection = myDB.collection("Student");
 
@@ -57,7 +57,7 @@ app.post("/student-insert", async (req, res) => {
 
 
 
-app.delete("/student-delete/:id", async (req, res) => {
+app.delete("/student-delete/:id", async (req, res) => { // Deleting student data from the database
     let myDB = await dbConnection();
     let studentCollection = myDB.collection("Student");
 
@@ -77,7 +77,7 @@ app.delete("/student-delete/:id", async (req, res) => {
 
 
 
-app.put("/student-update/:id", async (req, res) => {
+app.put("/student-update/:id", async (req, res) => {    // Updating student data in the database
     let myDB = await dbConnection();
     let studentCollection = myDB.collection("Student");
 
@@ -103,9 +103,11 @@ app.put("/student-update/:id", async (req, res) => {
         updateRes
     };
 
-    res.send(objRes);
+    res.send(objRes);   // Sending the response back to the client
     
 })
 
 
-app.listen("8000");
+app.listen("8000", () => {  // Starting the server on port 8000
+    console.log("Server started on port 8000");   // Logging the server start message
+});
