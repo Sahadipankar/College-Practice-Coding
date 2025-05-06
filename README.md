@@ -11,7 +11,7 @@
 
 - 🔭 I’m currently pursuing my **BCA - Hons**
 
-- 👨‍💻 All of my projects are available at [**GitHub Repositories**](https://github.com/Sahadipankar?tab=repositories)
+- 👨‍💻 All of my college learnings are available at [**College-Practice-Coding**](https://github.com/Sahadipankar/College-Practice-Coding)
 
 <hr>
 
