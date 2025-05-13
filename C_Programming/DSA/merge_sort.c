@@ -12,12 +12,26 @@ int main() {
     printf("\n");
     int arr[n];
     scan_printArray(arr, n);
-
+    
     merge_sort(arr, 0, n-1);
-
+    
     printArray(arr, n);
-
+    
     return 0;
+}
+
+void scan_printArray(int *arr, int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter the element no. %d: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    printf("\nThe given Array elements are: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
 }
 
 void merge_sort(int arr[], int low, int high) { // Function to sort the array using merge sort 
@@ -27,6 +41,15 @@ void merge_sort(int arr[], int low, int high) { // Function to sort the array us
         merge_sort(arr, low, mid);
         merge_sort(arr, mid + 1, high);
         merge(arr, low, mid, high);
+    }
+}
+
+void printArray(int *arr, int n)
+{
+    printf("\nThe Sorted Array is: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
     }
 }
 
@@ -60,25 +83,3 @@ void merge(int arr[], int low, int mid, int high) { // Function to merge the two
     }
 }
 
-void scan_printArray(int *arr, int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        printf("Enter the element no. %d: ", i + 1);
-        scanf("%d", &arr[i]);
-    }
-    printf("\nThe given Array elements are: \n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-}
-
-void printArray(int *arr, int n)
-{
-    printf("\nThe Sorted Array is: \n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-}
