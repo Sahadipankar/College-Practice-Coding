@@ -118,11 +118,11 @@
 
 
 
-
 // import React from 'react'
 // import Card from './components/Card'
 
 // const App = () => {
+
 //   const users = [
 //     {
 //       "name": "Aarav Sharma",
@@ -158,23 +158,109 @@
 //       "age": 38,
 //       "profession": "Financial Advisor",
 //       "profile_photo": "https://example.com/photos/karan.jpg"
+//     },
+//     {
+//       "name": "Raj Roy",
+//       "city": "Kolkata",
+//       "age": 21,
+//       "profession": "UX Designer",
+//       "profile_photo": "https://example.com/photos/raj.jpg"
 //     }
 //   ]
 
 
-//   users.map(function () {
-
-//     return "hey";
-//   })
-
 
 //   return (
-//     <div className='p-6'>
-//       {users.map(function (elem, idx) {
-//         return <Card key={idx} username={elem.name} age={elem.age} city={elem.city} profile_photo={elem.profile_photo} />
-//       })}
+//     <div>
+//       <div className='p-10'>
+//         {users.map(function (elem, idx) {
+//           return <Card key={idx} name={elem.name} profession={elem.profession} city={elem.city} age={elem.age} image={elem.profile_photo} />
+//         })}
+//       </div>
 //     </div>
 //   )
 // }
 
 // export default App
+
+
+
+
+
+
+
+// Axios is a promise-based HTTP client for the browser and Node.js. It is used to make HTTP requests to servers, allowing you to fetch or send data easily. In this example, we will use Axios to fetch data from a public API and display it in our React application.
+// npm install axios 
+
+import axios from 'axios'
+import React, { useState } from 'react'
+
+const App = () => {
+
+  const [data, setData] = useState([])
+  const [data2, setData2] = useState([])
+  const [showMessage, setShowMessage] = useState(false) // Track button click
+
+
+  const getImages = async () => {
+
+    setShowMessage(true) // Set to true when button is clicked
+
+    const response = await axios.get('https://picsum.photos/v2/list?page=2&limit=100')
+    const response2 = await axios.get('https://picsum.photos/v2/list')
+    // The above URL fetches a list of images from the Picsum API.
+    setData(response.data)
+    setData2(response2.data)
+
+    console.log(response.data);
+    console.log(response2.data);
+    // The response.data contains the list of images, which we set to the state variable 'data'.
+    // The response2.data contains the list of images, which we set to the state variable 'data2'.
+  }
+
+
+
+  return (
+    <div className='p-10'>
+      {/* Centered Container */}
+      <div className='flex flex-col items-center justify-center'>
+        <button
+          onClick={getImages}
+          className='bg-teal-600 text-white font-semibold text-2xl px-6 py-3 rounded active:scale-90'
+        >
+          Get Images
+        </button>
+
+        {/* Show message only after button is clicked */}
+        {showMessage && (
+          <h1 className='mt-5 text-white font-bold text-2xl text-center'>
+            Please wait for a few seconds after clicking the button to see the images.
+          </h1>
+        )}
+      </div>
+
+      {/* Images container */}
+      <div className='p-5 mt-5 bg-gray-900 rounded'>
+        {data2.map((elem, idx) => (
+          <div
+            key={idx}
+            className='bg-gray-100 text-black flex items-center justify-between w-full px-7 py-6 rounded mb-3'
+          >
+            <img src={elem.download_url} alt={elem.author} />
+          </div>
+        ))}
+
+        {data.map((elem, idx) => (
+          <div
+            key={idx}
+            className='bg-gray-100 text-black flex items-center justify-between w-full px-7 py-6 rounded mb-3'
+          >
+            <img src={elem.download_url} alt={elem.author} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App
