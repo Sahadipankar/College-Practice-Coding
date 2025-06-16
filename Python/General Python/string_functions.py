@@ -81,3 +81,6 @@ print()
 
 print("26. Format the string:", s.format())  # Formats the string using format specifiers
 print()
+
+print("27. Reverse the string:", s[::-1])  # Reverses the string
+print()

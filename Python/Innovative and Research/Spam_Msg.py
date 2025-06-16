@@ -9,9 +9,9 @@ print("\nSwitch to the target window. The script will start typing in 5 seconds.
 time.sleep(5)
 
 # Start a loop to send the message 5 times
-for count in range(30):  # Loop runs 5 times (0 to 4)
+for count in range(10):  # Loop runs 5 times (0 to 4)
     # Type the message "  " at the current cursor position
-    pyautogui.typewrite("Bhai golpo hoye giyechilo ektu agei") # Message to be sent
+    pyautogui.typewrite("sepnu pues") # Message to be sent
     
     # Simulate pressing the "Enter" key to send the message
     pyautogui.press("enter")
