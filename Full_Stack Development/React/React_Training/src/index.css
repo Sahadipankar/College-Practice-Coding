@@ -8,15 +8,14 @@ body {
 }
 
 h1 {
-  position: absolute;
+  margin-top: 1rem;
+  text-align: center;
   text-decoration: underline;
   text-decoration-color: #43060a;
   text-decoration-thickness: 20px;
   font-size: 70px;
   font-weight: 600;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+  color: wheat;
 }
 
 

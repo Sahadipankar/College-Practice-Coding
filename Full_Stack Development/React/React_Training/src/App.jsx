@@ -340,33 +340,66 @@
 
 
 
-// React Router Dom is a powerful library for managing navigation and routing in React applications. It allows you to create single-page applications with multiple views, enabling users to navigate between different components without reloading the page. In this example, we will set up a basic React Router configuration with multiple pages and links.
-// To use React Router Dom, you need to install it first:
+// // React Router Dom is a powerful library for managing navigation and routing in React applications. It allows you to create single-page applications with multiple views, enabling users to navigate between different components without reloading the page. In this example, we will set up a basic React Router configuration with multiple pages and links.
+// // To use React Router Dom, you need to install it first:
 
-// npm install react-router-dom
+// // npm install react-router-dom
 
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+// import React from 'react'
+// import { Route, Routes } from 'react-router-dom'
 
-import Header from './components/Header' // Import Header component
+// import Header from './components/Header' // Import Header component
 
-import Home from './pages/Home' // Import Home component
-import About from './pages/About' // Import About component
-import Contact from './pages/Contact' // Import Contact component
-import Product from './pages/Product' // Import Product component
+// import Home from './pages/Home' // Import Home component
+// import About from './pages/About' // Import About component
+// import Contact from './pages/Contact' // Import Contact component
+// import Product from './pages/Product' // Import Product component
 
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <Routes>
+//         <Route path='/' element={<Home />} />
+//         <Route path='/about' element={<About />} />
+//         <Route path='/contact' element={<Contact />} />
+//         <Route path='/product' element={<Product />} />
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+// Context API is a powerful feature in React that allows you to share data between components without having to pass props down through every level of the component tree. It is particularly useful for managing global state or data that needs to be accessed by multiple components at different levels of the hierarchy. In this example, we will create a simple Context API setup to manage user authentication state across our application.
+
+import React, { use, useContext } from 'react'
+import User_Header from './components/User_Header'
+import User_Section from './components/User_Section'
+import User_Footer from './components/User_Footer'
+import { DataContext } from './context/userContext' // Import the DataContext from userContext
 
 const App = () => {
+
+  const data = useContext(DataContext)
+  // Use the DataContext to access the username or any other data provided by the context
+  console.log(data) // Log the username to the console
+
   return (
     <div>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/product' element={<Product />} />
-
-      </Routes>
+      <h1>Hello this is App {data.name}</h1>
+      <User_Header />
+      <User_Section />
+      <User_Footer />
+      {/* The User_Header, User_Section, and User_Footer components will be rendered here */}
     </div>
   )
 }
