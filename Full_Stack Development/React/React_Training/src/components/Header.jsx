@@ -8,7 +8,7 @@ const Header = () => {
             <div className='flex gap-10 text-xl font-semibold underline'> 
 
                 {/* Using Link component from react-router-dom for navigation without page reload.
-                a tag reloads the page while Link component does not */}
+                a tag reloads the page while Link component does not. */}
 
                 <Link to="/" className="px-4 py-2 hover:bg-emerald-600 rounded">Home</Link>
                 <Link to="/about" className="px-4 py-2 hover:bg-emerald-600 rounded">About</Link>
