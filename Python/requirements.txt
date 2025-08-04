@@ -1,0 +1,11 @@
+# This file lists the Python packages required for the project. 
+
+# pip install -r requirements.txt
+
+jupyterlab
+numpy 
+scipy 
+pandas 
+matplotlib 
+seaborn 
+scikit-learn 
