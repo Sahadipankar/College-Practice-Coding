@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="doctorApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Doctor Appointment Admin Panel</title>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- App -->
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="AdminController">
+
+  <h1>Doctor's Appointment Admin Panel</h1>
+
+  <!-- Doctor Management -->
+  <div class="form-section">
+    <h2>Manage Doctors</h2>
+    <form ng-submit="addDoctor()">
+      <input type="text" ng-model="newDoctor.name" placeholder="Doctor Name" required>
+      <input type="text" ng-model="newDoctor.specialization" placeholder="Specialization" required>
+      <button type="submit">Add Doctor</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Doctor Name</th>
+          <th>Specialization</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="doc in doctors track by $index">
+          <td>{{$index + 1}}</td>
+          <td>{{doc.name}}</td>
+          <td>{{doc.specialization}}</td>
+          <td>
+            <button ng-click="deleteDoctor($index)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Appointment Management -->
+  <div class="form-section">
+    <h2>Manage Appointments</h2>
+    <form ng-submit="addAppointment()">
+      <input type="text" ng-model="newAppointment.patient" placeholder="Patient Name" required>
+      <select ng-model="newAppointment.doctor" required>
+        <option value="" disabled selected>Select Doctor</option>
+        <option ng-repeat="doc in doctors" value="{{doc.name}}">
+          {{doc.name}} ({{doc.specialization}})
+        </option>
+      </select>
+      <input type="datetime-local" ng-model="newAppointment.date" required>
+      <button type="submit">Add Appointment</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="appt in appointments track by $index">
+          <td>{{$index + 1}}</td>
+          <td>{{appt.patient}}</td>
+          <td>{{appt.doctor}}</td>
+          <td>{{appt.date | date:'medium'}}</td>
+          <td>
+            <button ng-click="deleteAppointment($index)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

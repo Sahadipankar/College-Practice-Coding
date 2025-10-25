@@ -2,7 +2,7 @@
 
 # pip install -r requirements.txt
 
-python.exe -m pip install --upgrade pip
+# python.exe -m pip install --upgrade pip
 jupyterlab
 numpy 
 scipy 
@@ -10,3 +10,4 @@ pandas
 matplotlib 
 seaborn 
 scikit-learn 
+ipykernel
