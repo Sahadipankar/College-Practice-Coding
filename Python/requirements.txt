@@ -11,3 +11,4 @@ matplotlib
 seaborn 
 scikit-learn 
 ipykernel
+pyautogui

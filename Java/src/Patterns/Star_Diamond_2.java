@@ -28,5 +28,6 @@ public class Star_Diamond_2 {
             }
             System.out.println();
         }
+        sc.close();
     }
 }
