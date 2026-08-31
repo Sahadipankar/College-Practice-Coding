@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 // Book class (Represents a Book entity)
+// Book class (Represents a Book entity)
 class Book {
     private String bookName;
     private String bookAuthor;
-    private int ISBN; 
+    private int ISBN;
     private int bookNo; // Unique identifier for each book
     private boolean isAvailable;
 
@@ -25,6 +26,14 @@ class Book {
         return bookName;
     }
 
+    public String getBookAuthor() {
+        return bookAuthor;
+    }
+
+    public int getISBN() {
+        return ISBN;
+    }
+
     public int getBookNo() {
         return bookNo;
     }
@@ -40,7 +49,13 @@ class Book {
 
     // Method to display book information
     public void displayBookInfo() {
-        System.out.println("BookNo: " + bookNo + ", Title: " + bookName + ", Author: " + bookAuthor + ", Available: " + (isAvailable ? "Yes" : "No"));
+        System.out.println("----------------------------------------");
+        System.out.println("Book No   : " + bookNo);
+        System.out.println("Title     : " + bookName);
+        System.out.println("Author    : " + bookAuthor);
+        System.out.println("ISBN      : " + ISBN);
+        System.out.println("Available : " + (isAvailable ? "Yes" : "No"));
+        System.out.println("----------------------------------------");
     }
 }
 
@@ -121,6 +136,16 @@ class Library {
     public void addMember(Member member) {
         members.add(member);
         System.out.println("Member '" + member.getMemberName() + "' added to the library.");
+    }
+
+    // Method to find a book by ISBN
+    public Book findBookByISBN(int isbn) {
+        for (Book book : books) {
+            if (book.getISBN() == isbn) {
+                return book;
+            }
+        }
+        return null;
     }
 
     // Method to find a book by its bookNo
@@ -219,7 +244,8 @@ public class Library_Management {
             System.out.println("5. Display all books");
             System.out.println("6. Display all members");
             System.out.println("7. Display total number of books and members");
-            System.out.println("8. Exit");
+            System.out.println("8. Search book by ISBN");
+            System.out.println("9. Exit");
 
             System.out.print("\nSelect your choice: ");
             int choice = sc.nextInt();
@@ -285,11 +311,24 @@ public class Library_Management {
                     break;
 
                 case 8:
-                    // Exit the program
+                    System.out.print("\nEnter ISBN: ");
+                    int isbn = sc.nextInt();
+
+                    Book book = library.findBookByISBN(isbn);
+
+                    if (book != null) {
+                        System.out.println("\nBook Found:");
+                        book.displayBookInfo();
+                    } else {
+                        System.out.println("No book found with ISBN " + isbn);
+                    }
+                    break;
+
+                case 9:
                     System.out.println("Exiting the system...");
                     sc.close();
                     return;
-
+                    
                 default:
                     System.out.println("Invalid option, please try again.");
             }

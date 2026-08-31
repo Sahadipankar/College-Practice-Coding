@@ -2,7 +2,7 @@ package OOPs;
 
 class newShape {
     public void newArea() {
-        System.out.println("displays area");
+        System.out.println("Displays Area");
     }
 }
 

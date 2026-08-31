@@ -2,21 +2,21 @@ package OOPs;
 
 class Shape {
     public void area() {
-        System.out.println("Displays Area of Shape");
+        System.out.println("\nDisplays Area of Shape");
     }
 }
 
 class Triangle extends Shape {
     @Override
     public void area() {
-        System.out.println("Calculating Area of Triangle");
+        System.out.println("\nCalculating Area of Triangle");
     }
 }
 
 class Circle extends Shape {
     @Override
     public void area() {
-        System.out.println("Calculating Area of Circle");
+        System.out.println("\nCalculating Area of Circle");
     }
 }
 
